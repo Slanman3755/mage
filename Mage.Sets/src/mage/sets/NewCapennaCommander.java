@@ -24,6 +24,7 @@ public final class NewCapennaCommander extends ExpansionSet {
         cards.add(new SetCardInfo("Ajani Unyielding", 324, Rarity.MYTHIC, mage.cards.a.AjaniUnyielding.class));
         cards.add(new SetCardInfo("Alela, Artful Provocateur", 325, Rarity.MYTHIC, mage.cards.a.AlelaArtfulProvocateur.class));
         cards.add(new SetCardInfo("Angelic Sleuth", 12, Rarity.RARE, mage.cards.a.AngelicSleuth.class));
+        cards.add(new SetCardInfo("Anhelo, the Painter", 1, Rarity.MYTHIC, mage.cards.a.AnheloThePainter.class));
         cards.add(new SetCardInfo("Arasta of the Endless Web", 279, Rarity.RARE, mage.cards.a.ArastaOfTheEndlessWeb.class));
         cards.add(new SetCardInfo("Arcane Sanctum", 385, Rarity.UNCOMMON, mage.cards.a.ArcaneSanctum.class));
         cards.add(new SetCardInfo("Arcane Signet", 360, Rarity.COMMON, mage.cards.a.ArcaneSignet.class));
