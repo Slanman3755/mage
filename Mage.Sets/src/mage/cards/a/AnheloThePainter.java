@@ -6,7 +6,8 @@ import java.util.stream.Collectors;
 
 import mage.MageInt;
 import mage.abilities.common.SpellCastControllerTriggeredAbility;
-import mage.abilities.effects.common.CasualtyEffect;
+import mage.abilities.effects.common.CopyTargetSpellEffect;
+import mage.abilities.keyword.CasualtyAbility;
 import mage.constants.SubType;
 import mage.constants.SuperType;
 import mage.abilities.keyword.DeathtouchAbility;
@@ -57,7 +58,7 @@ public final class AnheloThePainter extends CardImpl {
 class AnheloThePainterTriggeredAbility extends SpellCastControllerTriggeredAbility {
 
     AnheloThePainterTriggeredAbility() {
-        super(new CasualtyEffect(2), new FilterInstantOrSorcerySpell(), false);
+        super(null,false);
     }
 
     AnheloThePainterTriggeredAbility(AnheloThePainterTriggeredAbility ability) {
@@ -74,7 +75,7 @@ class AnheloThePainterTriggeredAbility extends SpellCastControllerTriggeredAbili
         if (super.checkTrigger(event, game)) {
             Spell spell = game.getStack().getSpell(event.getTargetId());
             if (isFirstInstantOrSorceryCastByPlayerOnTurn(spell, game)) {
-                this.getEffects().get(0).setTargetPointer(new FixedTarget(spell.getId()));
+                spell.addAbility(new CasualtyAbility(spell, 2));
                 return true;
             }
         }
